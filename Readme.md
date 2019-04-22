@@ -60,7 +60,7 @@ correctly.
 
 You should see an output similar to above. 
 
-# Install Jupyter, Keras and TensorFlow in Container
+# Install Anaconda, Keras and TensorFlow in Container
 
 Build the ``keras-jupyter`` image using the ``docker-compose.yml`` in this project. It extends the official NVIDIA Cuda 10.1 
 runtime image (with CUDA and CUDNN pre-installed) by installing Anaconda3 and then adds the GPU builds of
