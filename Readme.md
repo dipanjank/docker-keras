@@ -1,12 +1,12 @@
 # Docker-Keras
 
 This is a shell project that builds an NVIDIA GPU-capable Python environment with Anaconda and Keras 
-(with Tensorflow GPU background) using Ubuntu Linux 18.04. One can then launch a Jupyter Notebook Server
-or a standard Python project using the Dockerized environment. 
+(with Tensorflow GPU) using Ubuntu Linux 18.04. One can then launch a Jupyter Notebook Server
+or a standard Python project using the dockerized environment. 
 
 # Host Machine Setup
 
-The host machines needs to have 
+The host machine needs to have 
 
 * NVIDIA GPU Driver 
 * docker-nvidia2
@@ -15,7 +15,7 @@ Make sure to upgrade docker and docker-compose to a fairly recent version.
 
 ## Install NVIDIA GPU Driver
 
-Follow the instuctions described in http://www.linuxandubuntu.com/home/how-to-install-latest-nvidia-drivers-in-linux.
+Follow the instructions described in http://www.linuxandubuntu.com/home/how-to-install-latest-nvidia-drivers-in-linux.
 
 ## Install docker-nvidia2
 
@@ -50,8 +50,8 @@ Mon Apr 22 21:54:29 2019
 
 As a bonus, you now know which GPU laptop I'm using ;)
 
-Next, pull an existing NVIDIA cuda containers and execute the same command. You should see the same
-result. This verifies that docker-nvidia is working correctly.
+Next, pull an existing NVIDIA cuda containers and execute the same command. This verifies that docker-nvidia is working 
+correctly.
 
 
 ```bash
@@ -79,7 +79,7 @@ $ docker-compose run -p 8888:8888 keras-jupyter
 $ jupyter-notebook --ip 0.0.0.0 --port 8888 --allow-root --no-browser &
 ```
 
-And you're ready to kick off your GPU based Machine Learning Project! Navigate to http://127.0.0.1:8888 access the Jupyter
+And you're ready to kick off your GPU based Machine Learning Project! Navigate to http://127.0.0.1:8888 to access the Jupyter
 server. The ``gpu_check.ipynb`` notebook included in this project is an example of checking TF device placement to ensure
 that TensorFlow is really using the GPU.
 
