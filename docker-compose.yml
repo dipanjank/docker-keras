@@ -1,0 +1,11 @@
+version: '2.3'
+
+services:
+  keras-jupyter:
+    runtime: nvidia      
+    build:
+        context: .
+        dockerfile: dockerfile
+    volumes:
+      - ~/notebooks:/home/ubuntu/notebooks
+
